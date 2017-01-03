@@ -74,7 +74,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Francis starts a new list by entering a new item. He
         # is less interesting than Edith...
-        inputbox = self.browser.find_element_by_tag_name('id_new_item')
+        inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Buy milk')
         inputbox.send_keys(Keys.ENTER)
 
@@ -89,7 +89,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Satisfied, they both go back to sleep
 
-        self.fail('Finish the test!')
+        # self.fail('Finish the test!')
 
         # She visits that URL - her to-do list is still there.
 
