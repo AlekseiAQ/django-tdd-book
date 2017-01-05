@@ -25,7 +25,7 @@ SECRET_KEY = '4mggk+nv0mf9a1pcffc2)4j!ju6luw@z0wa(i$ttdtsrp3=1b3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [codewars-alekseyaq.c9users.io]
+ALLOWED_HOSTS = []
 
 
 # Application definition
