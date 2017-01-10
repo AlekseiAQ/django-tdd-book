@@ -16,18 +16,14 @@ from unittest import skip
 
 class HomePageTest(TestCase):
     """docstring for HomePageTest"""
-    maxDiff = None
+    def test_uses_home_template(self):
+        response = self.client.get('/')
+        self.assertTemplateUsed(response, 'home.html')
+
 
     def test_home_page_uses_item_form(self):
         response = self.client.get('/')
         self.assertIsInstance(response.context['form'], ItemForm)
-
-
-    def test_home_page_returns_correct_html(self):
-        request = HttpRequest()
-        response = home_page(request)
-        expected_html = render_to_string('home.html', {'form': ItemForm()})
-        self.assertMultiLineEqual(response.content.decode(), expected_html)
 
 
 class ListViewTest(TestCase):
