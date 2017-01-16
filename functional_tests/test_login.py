@@ -34,7 +34,7 @@ class LoginTest(FunctionalTest):
         body = self.wait_for_email(test_email, SUBJECT)
 
         # It has a url link in it
-        self.assertIn('User this link to log in', body)
+        self.assertIn('Use this link to log in', body)
         url_search = re.search(r'http://.+/.+$', body)
         if not url_search:
             self.fail(
