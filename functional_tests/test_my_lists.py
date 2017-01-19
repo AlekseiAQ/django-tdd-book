@@ -11,6 +11,7 @@ class MyListsTest(FunctionalTest):
             session_key = create_session_on_server(self.server_host, email)
         else:
             session_key = create_pre_authenticated_session(email)
+
         ## to set a cookie we need to first visit the domain.
         ## 404 pages load the quickest!
         self.browser.get(self.server_url + "/404_no_such_url/")
